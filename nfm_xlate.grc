@@ -890,7 +890,7 @@
     </param>
     <param>
       <key>samp_rate</key>
-      <value>48e3</value>
+      <value>44100</value>
     </param>
     <param>
       <key>width</key>
