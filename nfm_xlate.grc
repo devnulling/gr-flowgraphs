@@ -214,7 +214,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(504, 845)</value>
+      <value>(376, 797)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -717,7 +717,7 @@
     </param>
   </block>
   <block>
-    <key>analog_pwr_squelch_xx</key>
+    <key>analog_simple_squelch_cc</key>
     <param>
       <key>alpha</key>
       <value>1e-4</value>
@@ -740,19 +740,15 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(816, 386)</value>
+      <value>(832, 407)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
     </param>
     <param>
-      <key>gate</key>
-      <value>True</value>
-    </param>
-    <param>
       <key>id</key>
-      <value>analog_pwr_squelch_xx_0</value>
+      <value>analog_simple_squelch_cc_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -763,16 +759,8 @@
       <value>0</value>
     </param>
     <param>
-      <key>ramp</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>threshold</key>
       <value>sql_lev</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
     </param>
   </block>
   <block>
@@ -854,7 +842,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(984, 600)</value>
+      <value>(888, 600)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -929,7 +917,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(224, 754)</value>
+      <value>(96, 706)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -980,7 +968,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(712, 704)</value>
+      <value>(584, 656)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1106,7 +1094,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(864, 725)</value>
+      <value>(736, 669)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1200,7 +1188,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 762)</value>
+      <value>(360, 714)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1255,7 +1243,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(488, 674)</value>
+      <value>(360, 626)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4177,7 +4165,7 @@
     </param>
   </block>
   <connection>
-    <source_block_id>analog_pwr_squelch_xx_0</source_block_id>
+    <source_block_id>analog_simple_squelch_cc_0</source_block_id>
     <sink_block_id>blks2_rational_resampler_xxx_1</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
@@ -4220,7 +4208,7 @@
   </connection>
   <connection>
     <source_block_id>freq_xlating_fir_filter_xxx_0</source_block_id>
-    <sink_block_id>analog_pwr_squelch_xx_0</sink_block_id>
+    <sink_block_id>analog_simple_squelch_cc_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
