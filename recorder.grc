@@ -82,6 +82,69 @@
     </param>
   </block>
   <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1e3</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(184, 260)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>Freq</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>32e3</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>comment</key>
@@ -206,7 +269,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(216, 88)</value>
+      <value>(168, 88)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -238,6 +301,120 @@
     </param>
   </block>
   <block>
+    <key>analog_sig_source_x</key>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>freq</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(176, 164)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>analog_sig_source_x_0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>offset</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>analog.GR_COS_WAVE</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_add_xx</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 104)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_add_xx_0</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+  </block>
+  <block>
     <key>blocks_file_sink</key>
     <param>
       <key>append</key>
@@ -261,7 +438,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>prefix + datetime.now().strftime("%Y.%m.%d.%H.%M.%S") + ".dat" if recording_checkbox else "/dev/null"</value>
+      <value>prefix + datetime.now().strftime("%Y.%m.%d.%H.%M.%S") + "_" + str(freq) +".f32" if recording_checkbox else "/dev/null"</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -308,7 +485,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(400, 101)</value>
+      <value>(440, 116)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -385,6 +562,10 @@
       <value>1.0</value>
     </param>
     <param>
+      <key>axislabels</key>
+      <value>True</value>
+    </param>
+    <param>
       <key>bw</key>
       <value>samp_rate</value>
     </param>
@@ -418,7 +599,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(624, 87)</value>
+      <value>(640, 88)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -653,6 +834,10 @@
       <value>firdes.WIN_BLACKMAN_hARRIS</value>
     </param>
     <param>
+      <key>label</key>
+      <value>Relative Gain</value>
+    </param>
+    <param>
       <key>ymax</key>
       <value>10</value>
     </param>
@@ -660,9 +845,25 @@
       <key>ymin</key>
       <value>-140</value>
     </param>
+    <param>
+      <key>units</key>
+      <value>dB</value>
+    </param>
   </block>
   <connection>
     <source_block_id>analog_noise_source_x_0</source_block_id>
+    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_sig_source_x_0</source_block_id>
+    <sink_block_id>blocks_add_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_add_xx_0</source_block_id>
     <sink_block_id>blocks_throttle_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
